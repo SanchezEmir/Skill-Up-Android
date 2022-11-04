@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item android:title="Home"
+        android:icon="@drawable/ic_baseline_home_24"
+        android:id="@+id/homeFragment"/>
+
+    <item android:title="Top Up Balance"
+        android:icon="@drawable/ic_baseline_attach_money_24"
+        android:id="@+id/topUpBalanceFragment"/>
+
+    <item android:title="Payments"
+        android:icon="@drawable/ic_baseline_payment_24"
+        android:id="@+id/paymentLoadFragment"/>
+
+    <item android:title="Transactions"
+        android:icon="@drawable/ic_baseline_checklist_24"
+        android:id="@+id/transactionsFragment"/>
+
+    <item android:title="Send"
+        android:icon="@drawable/ic_baseline_send_24"
+        android:id="@+id/sendMoneyFragment"/>
+
+</menu>

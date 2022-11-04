@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main_graph"
+    app:startDestination="@id/loginFragment">
+
+    <fragment
+        android:id="@+id/loginFragment"
+        android:name="com.Alkemy.alkemybankbase.ui.fragments.LoginFragment"
+        android:label="fragment_login"
+        tools:layout="@layout/fragment_login" >
+        <action
+            android:id="@+id/action_loginFragment_to_homeFragment"
+            app:destination="@id/homeFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/homeFragment"
+        android:name="com.Alkemy.alkemybankbase.ui.fragments.HomeFragment"
+        android:label="fragment_home"
+        tools:layout="@layout/fragment_home" />
+    <fragment
+        android:id="@+id/balanceFragment"
+        android:name="com.Alkemy.alkemybankbase.ui.fragments.BalanceFragment"
+        android:label="fragment_balance"
+        tools:layout="@layout/fragment_balance" />
+    <fragment
+        android:id="@+id/paymentLoadFragment"
+        android:name="com.Alkemy.alkemybankbase.ui.fragments.PaymentLoadFragment"
+        android:label="fragment_payment_load"
+        tools:layout="@layout/fragment_payment_load" />
+    <fragment
+        android:id="@+id/sendMoneyFragment"
+        android:name="com.Alkemy.alkemybankbase.ui.fragments.SendMoneyFragment"
+        android:label="fragment_send_money"
+        tools:layout="@layout/fragment_send_money" />
+    <fragment
+        android:id="@+id/topUpBalanceFragment"
+        android:name="com.Alkemy.alkemybankbase.ui.fragments.TopUpBalanceFragment"
+        android:label="fragment_top_up_balance"
+        tools:layout="@layout/fragment_top_up_balance" />
+    <fragment
+        android:id="@+id/transactionsFragment"
+        android:name="com.Alkemy.alkemybankbase.ui.fragments.TransactionsFragment"
+        android:label="fragment_transactions"
+        tools:layout="@layout/fragment_transactions" />
+</navigation>
