@@ -1,5 +1,6 @@
 package com.Alkemy.alkemybankbase.ui.fragments.login
 
+import android.app.AlertDialog
 import android.os.Bundle
 import android.text.Editable
 import android.text.TextWatcher
@@ -87,8 +88,13 @@ class LoginFragment : Fragment(R.layout.fragment_login) {
 
     // Show error alert dialog if login fails
     private fun showError(error: String) {
-        // TODO Show Error Dialog
-        requireContext().toast(error)
+        val dialog: AlertDialog =
+            AlertDialog.Builder(context).setMessage(error).setTitle("Invalid user or password")
+                .setNeutralButton(
+                    "dissmiss"
+                ) { _, _ -> }
+                .create()
+        dialog.show()
     }
 
     // Show progress indicator while loading

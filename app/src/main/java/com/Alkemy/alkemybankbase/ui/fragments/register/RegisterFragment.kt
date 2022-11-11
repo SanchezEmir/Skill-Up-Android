@@ -1,6 +1,7 @@
 package com.Alkemy.alkemybankbase.ui.fragments.register
 
 import android.R.attr.editable
+import android.app.AlertDialog
 import android.os.Bundle
 import android.text.Editable
 import android.text.TextWatcher
@@ -52,9 +53,13 @@ class RegisterFragment : Fragment(R.layout.fragment_register) {
     }
 
     private fun showError(message: String) {
-        message.forEach {
-        }
-        binding.root.context.toast(message)
+        val dialog: AlertDialog =
+            AlertDialog.Builder(context).setMessage(message).setTitle("Sign up error")
+                .setNeutralButton(
+                    "retry"
+                ) { _, _ -> }
+                .create()
+        dialog.show()
     }
 
     private fun showProgress(visibility:Boolean) = with(binding){
