@@ -2,21 +2,27 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
 
     <item
-        android:id="@+id/homeFragment"
+        android:id="@+id/homeFragment2"
         android:icon="@drawable/ic_baseline_home_24"
         android:title="Home" />
 
     <item
-        android:id="@+id/balanceFragment"
+        android:id="@+id/topUpBalanceFragment"
         android:icon="@drawable/ic_baseline_attach_money_24"
         android:title="Top up balance" />
 
-
-
-
+    <item
+        android:id="@+id/transactionsFragment"
+        android:icon="@drawable/ic_baseline_format_list_bulleted_24"
+        android:title="Transactions"/>
 
     <item
-        android:id="@+id/sendMoneyFragment"
+        android:id="@+id/paymentsLoadFragment"
+        android:icon="@drawable/ic_baseline_payment_24"
+        android:title="Payments"/>
+
+    <item
+        android:id="@+id/sendMoneyFragment2"
         android:icon="@drawable/ic_baseline_send_24"
         android:title="Send Money" />
 
