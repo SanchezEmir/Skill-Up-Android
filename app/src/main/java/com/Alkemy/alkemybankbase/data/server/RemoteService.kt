@@ -14,4 +14,7 @@ interface RemoteService {
     @GET("/transactions")
     suspend fun getTransactions(@Header("Authorization") AccessToken: String): TransactionsResponse
 
+    @POST("/transactions")
+    suspend fun createExpense(@Header("Authorization") AccessToken: String, @Body request: ExpenseRequest): ExpenseResponse
+
 }

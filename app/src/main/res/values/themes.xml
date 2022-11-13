@@ -35,7 +35,7 @@
 
         <!-- Use windowSplashScreenAnimatedIcon to add either a drawable or an
              animated drawable. One of these is required. -->
-        <item name="windowSplashScreenAnimatedIcon">@drawable/splash_3</item>
+        <item name="windowSplashScreenAnimatedIcon">@drawable/wallet_splash_4</item>
         <!-- Required for animated icons -->
         <item name="windowSplashScreenAnimationDuration">200</item>
 

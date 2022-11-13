@@ -30,7 +30,7 @@ constructor(private val remoteService: RemoteService,
 
     override suspend fun getTransactions(): Either<Error, TransactionsResponse> = tryCall {
         val accessToken = sharedPreferences.getString(Constants.TOKEN, "")
-        remoteService.getTransactions("Bearer" + accessToken!!)
+        remoteService.getTransactions("Bearer " + accessToken!!)
     }
 
 

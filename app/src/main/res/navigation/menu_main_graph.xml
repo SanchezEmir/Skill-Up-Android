@@ -25,8 +25,8 @@
         android:label="fragment_send_money"
         tools:layout="@layout/fragment_send_money" />
     <fragment
-        android:id="@+id/topUpBalanceFragment"
-        android:name="com.Alkemy.alkemybankbase.ui.fragments.topupbalance.TopUpBalanceFragment"
-        android:label="fragment_top_up_balance"
-        tools:layout="@layout/fragment_top_up_balance" />
+        android:id="@+id/expensesFragment"
+        android:name="com.Alkemy.alkemybankbase.ui.fragments.expenses.ExpensesFragment"
+        android:label="expenses"
+        tools:layout="@layout/fragment_expenses" />
 </navigation>

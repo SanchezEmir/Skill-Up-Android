@@ -19,6 +19,18 @@ data class TransactionsResponse(
     val data: MutableList<TransactionModel>
 )
 
+data class ExpenseResponse(
+    val id: Int, //"id": 3002,
+    val amount: String, //"amount": 500,
+    val concept: String, //"concept": "Pago de honorarios",
+    val date: String, //"date": "2022-10-26T00:00:00.000Z",
+    val type: String, //"type": "payment",
+    val accountId: Int, //"accountId": 1,
+    val userId:Int, //"userId": 4,
+    val updatedAt: String, //"updatedAt": "2022-11-13T09:59:37.734Z",
+    val createdAt: String //"createdAt": "2022-11-13T09:59:37.734Z"
+)
+
 data class ErrorResponse(
     val error: String, //"error": "No autorizado"
     val status:Int //"status": 401

@@ -44,8 +44,7 @@ class RegisterFragment : Fragment(R.layout.fragment_register) {
                 is RegisterViewModel.RegisterUserState.Error -> showError(state.message)
                 is RegisterViewModel.RegisterUserState.IsLoading -> showProgress(state.isLoading)
                 is RegisterViewModel.RegisterUserState.SuccessRegister -> {
-                    val userRemote = state.user
-                    requireContext().toast("Registro Exitoso: ${userRemote.first_name} ${userRemote.last_name}, Bienvenido")
+
                     requireActivity().onBackPressed()
                 }
             }

@@ -4,6 +4,8 @@ import android.content.Context
 import android.content.SharedPreferences
 import androidx.security.crypto.EncryptedSharedPreferences
 import androidx.security.crypto.MasterKeys
+import com.Alkemy.alkemybankbase.data.datasource.ExpenseRemoteDataSource
+import com.Alkemy.alkemybankbase.data.datasource.ExpenseServerDataSource
 import com.Alkemy.alkemybankbase.data.server.RemoteService
 import com.Alkemy.alkemybankbase.data.datasource.UserRemoteDatasource
 import com.Alkemy.alkemybankbase.data.datasource.UserServerDataSource
@@ -58,5 +60,8 @@ abstract class AppDataModule{
 
     @Binds
     abstract fun bindUserRemoteDataSource(userServerDataSource: UserServerDataSource) : UserRemoteDatasource
+
+    @Binds
+    abstract fun bindExpenseRemoteDataSource(expenseServerDataSource: ExpenseServerDataSource) : ExpenseRemoteDataSource
 
 }

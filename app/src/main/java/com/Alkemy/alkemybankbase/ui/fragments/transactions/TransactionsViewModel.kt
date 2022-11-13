@@ -1,5 +1,6 @@
 package com.Alkemy.alkemybankbase.ui.fragments.transactions
 
+import android.util.Log
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
@@ -16,12 +17,12 @@ class TransactionsViewModel @Inject constructor(
     private val requestTransactions: RequestTransactions
 ) : ViewModel() {
 
-    private val _state = MutableLiveData<TransactionsViewModel.TransactionsState>(TransactionsViewModel.TransactionsState.Init)
-    val state: MutableLiveData<TransactionsViewModel.TransactionsState> get() = _state
+    private val _state = MutableLiveData<TransactionsState>(TransactionsState.Init)
+    val state: MutableLiveData<TransactionsState> get() = _state
 
     fun getTransactions() {
         viewModelScope.launch {
-            _state.value = TransactionsViewModel.TransactionsState.IsLoading(true)
+            _state.value = TransactionsState.IsLoading(true)
 
             try {
 
@@ -31,17 +32,17 @@ class TransactionsViewModel @Inject constructor(
 
                 response.fold(
                     { error ->
-                        _state.value = TransactionsViewModel.TransactionsState.Error(error.toString())
+                        _state.value = TransactionsState.Error(error.toString())
                     },
                     { transactionsResponse ->
-                        _state.value = TransactionsViewModel.TransactionsState.Success(transactionsResponse.data)
+                        _state.value = TransactionsState.Success(transactionsResponse.data)
                     }
                 )
 
             } catch (e: Exception) {
-                _state.value = TransactionsViewModel.TransactionsState.Error("Catch: " + e.message.toString())
+                _state.value = TransactionsState.Error("Catch: " + e.message.toString())
             } finally {
-                _state.value = TransactionsViewModel.TransactionsState.IsLoading(false)
+                _state.value = TransactionsState.IsLoading(false)
                 }
             }
         }

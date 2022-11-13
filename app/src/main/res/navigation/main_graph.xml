@@ -31,5 +31,5 @@
         android:name="com.Alkemy.alkemybankbase.ui.fragments.register.RegisterFragment"
         android:label="fragment_register"
         tools:layout="@layout/fragment_register" />
-    <include app:graph="@navigation/menu_main_graph" />
+    <!--<include app:graph="@navigation/menu_main_graph" />-->
 </navigation>

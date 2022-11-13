@@ -7,23 +7,23 @@
         android:title="Home" />
 
     <item
-        android:id="@+id/topUpBalanceFragment"
+        android:id="@+id/expensesFragment"
         android:icon="@drawable/ic_baseline_attach_money_24"
-        android:title="Top up balance" />
+        android:title="Gastos" />
 
     <item
         android:id="@+id/transactionsFragment"
         android:icon="@drawable/ic_baseline_format_list_bulleted_24"
-        android:title="Transactions"/>
+        android:title="Carga de Saldo"/>
 
     <item
         android:id="@+id/paymentsLoadFragment"
         android:icon="@drawable/ic_baseline_payment_24"
-        android:title="Payments"/>
+        android:title="Movimientos"/>
 
     <item
         android:id="@+id/sendMoneyFragment2"
         android:icon="@drawable/ic_baseline_send_24"
-        android:title="Send Money" />
+        android:title="Envio Dinero" />
 
 </menu>

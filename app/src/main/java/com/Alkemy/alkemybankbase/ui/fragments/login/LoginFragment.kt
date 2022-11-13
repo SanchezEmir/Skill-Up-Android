@@ -30,8 +30,8 @@ class LoginFragment : Fragment(R.layout.fragment_login) {
         binding = FragmentLoginBinding.bind(view)
 
         //Mockup
-        //binding.edtEmailLogin.setText("prueba3@alkemy.com")
-        //binding.edtPasswordLogin.setText("123456")
+        binding.edtEmailLogin.setText("admin@emir.com")
+        binding.edtPasswordLogin.setText("123456")
 
         events()
         setupObservers()
@@ -77,9 +77,6 @@ class LoginFragment : Fragment(R.layout.fragment_login) {
                 is LoginViewModel.LoginState.Error -> showError(state.rawResponse)
                 is LoginViewModel.LoginState.IsLoading -> showProgress(state.isLoading)
                 is LoginViewModel.LoginState.Success -> {
-                    val userRemote = state.user
-                    // TODO Navigate to Home
-                    requireContext().toast("Token ${userRemote.accessToken}")
 
                     val intent = Intent(requireContext(), MenuMainHostActivity::class.java)
                     startActivity(intent)
