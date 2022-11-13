@@ -13,13 +13,13 @@ import com.Alkemy.alkemybankbase.ui.adapters.LastMovementsAdapter
 class HomeFragment : Fragment(R.layout.fragment_home) {
 
     private lateinit var binding: FragmentHomeBinding
-    private lateinit var homeAdapter: LastMovementsAdapter
+    //private lateinit var homeAdapter: LastMovementsAdapter
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         binding = FragmentHomeBinding.bind(view)
 
-        binding.recyclerTransactions.adapter = homeAdapter
+        //binding.recyclerTransactions.adapter = homeAdapter
     }
 
 
