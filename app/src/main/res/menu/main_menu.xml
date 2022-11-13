@@ -14,12 +14,12 @@
     <item
         android:id="@+id/transactionsFragment"
         android:icon="@drawable/ic_baseline_format_list_bulleted_24"
-        android:title="Carga de Saldo"/>
+        android:title="Movimientos"/>
 
     <item
         android:id="@+id/paymentsLoadFragment"
         android:icon="@drawable/ic_baseline_payment_24"
-        android:title="Movimientos"/>
+        android:title="Cargar saldo"/>
 
     <item
         android:id="@+id/sendMoneyFragment2"
