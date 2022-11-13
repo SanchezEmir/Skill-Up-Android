@@ -9,11 +9,15 @@ import android.widget.Toast
 import androidx.recyclerview.widget.RecyclerView
 import com.Alkemy.alkemybankbase.R
 import com.Alkemy.alkemybankbase.data.model.ListaMovimientos
+import com.Alkemy.alkemybankbase.data.model.TransactionModel
+import java.text.SimpleDateFormat
+import java.util.*
+import kotlin.collections.ArrayList
 
 class LastMovementsAdapter : RecyclerView.Adapter<LastMovementsAdapter.ViewHolder>() {
-    var movimientos: MutableList<ListaMovimientos> = ArrayList()
+    var movimientos: MutableList<TransactionModel> = ArrayList()
     lateinit var context: Context
-    fun LastMovementsAdapter(movimientos: MutableList<ListaMovimientos>, context: Context) {
+    fun lastMovementsAdapter(movimientos: MutableList<TransactionModel>, context: Context) {
         this.movimientos = movimientos
         this.context = context
     }
@@ -37,18 +41,20 @@ class LastMovementsAdapter : RecyclerView.Adapter<LastMovementsAdapter.ViewHolde
         val date = view.findViewById(R.id.Datetv) as TextView
         val type = view.findViewById(R.id.Typetv) as TextView
         val amount = view.findViewById(R.id.amounttv) as TextView
-        fun bind(movimientos: ListaMovimientos, context: Context) {
+        fun bind(movimientos: TransactionModel, context: Context) {
             concept.text = movimientos.concept
-            date.text = movimientos.date
+            val formatter = SimpleDateFormat("dd/MM/yyyy")
+            date.text = formatter.format(movimientos.date)
+//            date.text = movimientos.date.toString()
             type.text = movimientos.type
-            amount.text = movimientos.amount.toString()
-            itemView.setOnClickListener {
-                Toast.makeText(
-                    context,
-                    movimientos.concept,
-                    Toast.LENGTH_SHORT
-                ).show()
-            }
+            amount.text = "$" + movimientos.amount.toString()
+//            itemView.setOnClickListener {
+//                Toast.makeText(
+//                    context,
+//                    movimientos.concept,
+//                    Toast.LENGTH_SHORT
+//                ).show()
+//            }
         }
 
     }

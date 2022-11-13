@@ -43,15 +43,15 @@ class TransactionsViewModel @Inject constructor(
                 _state.value = TransactionsState.Error("Catch: " + e.message.toString())
             } finally {
                 _state.value = TransactionsState.IsLoading(false)
-                }
             }
         }
+    }
 
     sealed class TransactionsState {
-        object Init : TransactionsViewModel.TransactionsState()
-        data class IsLoading(val isLoading: Boolean) : TransactionsViewModel.TransactionsState()
-        data class Error(val message: String) : TransactionsViewModel.TransactionsState()
-        data class Success(val transactions: MutableList<TransactionModel>) : TransactionsViewModel.TransactionsState()
+        object Init : TransactionsState()
+        data class IsLoading(val isLoading: Boolean) : TransactionsState()
+        data class Error(val rawResponse: String) : TransactionsState()
+        data class Success(val transactions: MutableList<TransactionModel>) : TransactionsState()
     }
 }
 
