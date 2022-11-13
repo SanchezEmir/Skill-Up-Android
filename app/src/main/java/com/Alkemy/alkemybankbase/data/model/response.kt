@@ -13,6 +13,12 @@ data class UserLoginResponse(
     val accessToken:String
 )
 
+data class TransactionsResponse(
+    val previousPage: String?,
+    val nextPage: String?,
+    val data: MutableList<TransactionModel>
+)
+
 data class ErrorResponse(
     val error: String, //"error": "No autorizado"
     val status:Int //"status": 401

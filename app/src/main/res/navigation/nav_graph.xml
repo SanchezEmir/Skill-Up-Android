@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/home2">
+
+    <fragment
+        android:id="@+id/home2"
+        android:name="com.Alkemy.alkemybankbase.ui.fragments.Home"
+        android:label="fragment_home"
+        tools:layout="@layout/fragment_home" >
+        <action
+            android:id="@+id/action_home2_to_balance"
+            app:destination="@id/balance" />
+        <action
+            android:id="@+id/action_home2_to_movements"
+            app:destination="@id/movements" />
+    </fragment>
+    <fragment
+        android:id="@+id/balance"
+        android:name="com.Alkemy.alkemybankbase.ui.fragments.Balance"
+        android:label="fragment_balance"
+        tools:layout="@layout/fragment_balance" />
+    <fragment
+        android:id="@+id/movements"
+        android:name="com.Alkemy.alkemybankbase.ui.fragments.Movements"
+        android:label="fragment_movements"
+        tools:layout="@layout/fragment_movements" />
+</navigation>

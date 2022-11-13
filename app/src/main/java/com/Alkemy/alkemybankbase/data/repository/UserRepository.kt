@@ -10,4 +10,6 @@ class UserRepository @Inject constructor(private val userRemoteDatasource: UserR
 
     suspend fun createUser(request: UserRegisterRequest) = userRemoteDatasource.registerUser(request)
 
+    suspend fun getTransactions() = userRemoteDatasource.getTransactions()
+
 }

@@ -7,14 +7,15 @@ import retrofit2.HttpException
 import java.io.IOException
 
 sealed class Error {
-    data class Server(val code: Int) : Error()
+
+    data class Server(val message: String) : Error()
     object Connection : Error()
     data class UnknownError(val message: String) : Error()
 }
 
 fun Throwable.toError(): Error = when (this) {
     is IOException -> Error.Connection
-    is HttpException -> Error.Server(code())
+    is HttpException -> Error.Server(message ?: "")
     else -> Error.UnknownError(message ?: "")
 }
 

@@ -3,10 +3,7 @@ package com.Alkemy.alkemybankbase.data.datasource
 import android.content.SharedPreferences
 import arrow.core.Either
 import com.Alkemy.alkemybankbase.data.Error
-import com.Alkemy.alkemybankbase.data.model.UserLoginRequest
-import com.Alkemy.alkemybankbase.data.model.UserLoginResponse
-import com.Alkemy.alkemybankbase.data.model.UserRegisterRequest
-import com.Alkemy.alkemybankbase.data.model.UserRegisterResponse
+import com.Alkemy.alkemybankbase.data.model.*
 import com.Alkemy.alkemybankbase.data.server.RemoteService
 import com.Alkemy.alkemybankbase.data.tryCall
 import com.Alkemy.alkemybankbase.domain.User
@@ -30,6 +27,12 @@ constructor(private val remoteService: RemoteService,
     override suspend fun registerUser(request: UserRegisterRequest): Either<Error, User> = tryCall {
         remoteService.createUser(request).toDomainModel()
     }
+
+    override suspend fun getTransactions(): Either<Error, TransactionsResponse> = tryCall {
+        val accessToken = sharedPreferences.getString(Constants.TOKEN, "")
+        remoteService.getTransactions("Bearer" + accessToken!!)
+    }
+
 
     //Mappers
     private fun UserRegisterResponse.toDomainModel() : User = User(first_name, last_name, email, password, roleId, points)
