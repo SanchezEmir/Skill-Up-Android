@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/homeFragment2"
+        android:icon="@drawable/ic_baseline_home_24"
+        android:title="Home" />
+
+    <item
+        android:id="@+id/expensesFragment"
+        android:icon="@drawable/ic_baseline_attach_money_24"
+        android:title="Gastos" />
+
+    <item
+        android:id="@+id/transactionsFragment"
+        android:icon="@drawable/ic_baseline_format_list_bulleted_24"
+        android:title="Movimientos"/>
+
+    <item
+        android:id="@+id/chargeBalanceFragment"
+        android:icon="@drawable/ic_baseline_payment_24"
+        android:title="Carga de Saldo"/>
+
+    <item
+        android:id="@+id/sendMoneyFragment2"
+        android:icon="@drawable/ic_baseline_send_24"
+        android:title="Envio Dinero" />
+
+</menu>

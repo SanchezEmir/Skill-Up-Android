@@ -1,3 +1,9 @@
 # Default ignored files
 /shelf/
 /workspace.xml
+.idea/deploymentTargetDropDown.xml
+.idea/git_toolbox_prj.xml
+/deploymentTargetDropDown.xml
+deploymentTargetDropDown.xml
+/git_toolbox_prj.xml
+git_toolbox_prj.xml

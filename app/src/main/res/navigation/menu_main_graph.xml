@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/menu_main_graph"
+    app:startDestination="@id/homeFragment2">
+    <fragment
+        android:id="@+id/homeFragment2"
+        android:name="com.Alkemy.alkemybankbase.ui.fragments.home.HomeFragment"
+        android:label="fragment_home"
+        tools:layout="@layout/fragment_home" />
+    <fragment
+        android:id="@+id/transactionsFragment"
+        android:name="com.Alkemy.alkemybankbase.ui.fragments.transactions.TransactionsFragment"
+        android:label="fragment_transactions"
+        tools:layout="@layout/fragment_transactions" />
+    <fragment
+        android:id="@+id/sendMoneyFragment2"
+        android:name="com.Alkemy.alkemybankbase.ui.fragments.sendmoney.SendMoneyFragment"
+        android:label="fragment_send_money"
+        tools:layout="@layout/fragment_send_money" />
+    <fragment
+        android:id="@+id/expensesFragment"
+        android:name="com.Alkemy.alkemybankbase.ui.fragments.expenses.ExpensesFragment"
+        android:label="expenses"
+        tools:layout="@layout/fragment_expenses" />
+    <fragment
+        android:id="@+id/chargeBalanceFragment"
+        android:name="com.Alkemy.alkemybankbase.ui.fragments.chargebalance.ChargeBalanceFragment"
+        android:label="fragment_charge_balance"
+        tools:layout="@layout/fragment_charge_balance" />
+</navigation>

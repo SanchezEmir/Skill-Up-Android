@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "521852228540",
+    "project_id": "alkemy-skill-up-8ff87",
+    "storage_bucket": "alkemy-skill-up-8ff87.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:521852228540:android:901ae48db58cb8daa011b9",
+        "android_client_info": {
+          "package_name": "com.Alkemy.alkemybankbase"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "521852228540-b910ahe7fjoqia0qlp52htnibfda3plj.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDQCBXV84-AyI59FRu6e4uu4sq1a7JbHCU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "521852228540-b910ahe7fjoqia0qlp52htnibfda3plj.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

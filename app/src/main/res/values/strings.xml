@@ -1,3 +1,21 @@
 <resources>
-    <string name="app_name">AlkemyBankBase</string>
+    <string name="app_name">AlkyBank</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="fragment_login_title">Iniciar sesion</string>
+    <string name="fagment_login_help_email">Ingrese correo</string>
+    <string name="fagment_login_help_password">Ingrese contraseña</string>
+    <string name="text_button_fragment_login">INGRESAR</string>
+    <string name="fragment_register_title">CREAR CUENTA</string>
+    <string name="fragment_register_validation_names">ingrese su nombre</string>
+    <string name="fragment_register_validation_surname">ingrese su apellido</string>
+    <string name="fragment_register_validation_email_register">ingrese su correo</string>
+    <string name="fragment_register_validation_password">ingrese una contraseña</string>
+    <string name="fragment_login_valid_email">Ingresa correo</string>
+    <string name="fragment_login_valid_pwd">Ingresa contraseña</string>
+    <string name="fragment_register_invalid_password_confirmation">Passwords are not the same</string>
+    <string name="fragment_input_error">Chequea los datos ingresados</string>
+    <string name="home">Home</string>
+    <string name="balance">Balance</string>
+    <string name="movements">Movements</string>
 </resources>
